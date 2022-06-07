@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/subneteo.css" />
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <title>Subneteo</title>
+  <script type="text/javascript" src="js/subnetcalc.js"></script>
+</head>
+
+<body>
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+
+
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a id="modal" href="index.html">Inicio</a></li>
+          <li class="menu-active"><a href="#">Subneteo</a></li>
+          <li><a href="VLSM.html">VLSM</a></li>
+          <!-- <li><a href="#screenshots">Contactenos</a></li>-->
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+  <section id="hero">
+    <div id="header-holder" class="inner-header domainspage-header">
+      <!-- Section of ip and mask -->
+
+      <div class="#">
+
+
+        <div class="jumbotron text-center">
+          <h1>Direccionamiento por Subneteo</h1>
+
+        </div>
+  </section>
+
+
+  </div>
+  </div>
+  <div id="menu">
+    Filas mostradas
+    <ul>
+      <li onclick="showHideRow(1, this.id);" id="menunetid">ID Red</li>
+      <li onclick="showHideRow(2, this.id);" id="menusubnetid">ID Subred</li>
+      <li onclick="showHideRow(3, this.id);" id="menufirsthost">Primer Host</li>
+      <li onclick="showHideRow(4, this.id);" id="menulasthost">Ultimo Host</li>
+      <li onclick="showHideRow(5, this.id);" id="menubroadcast">Broadcast</li>
+      <li onclick="showHideRow(6, this.id);" id="menumask">Mascara de Subred</li>
+    </ul>
+    Columnas mostradas
+    <ul>
+      <li onclick="showHideCol(1, this.id);" id="menudec">Decimal</li>
+      <li onclick="showHideCol(2, this.id);" id="menuhex">Hexadecimal</li>
+      <li onclick="showHideCol(3, this.id);" id="menubin">Binario</li>
+    </ul>
+  </div>
+  <ul id="input">
+    <li>Direccion IP: <input type="text" id="ip" onchange="action(this.id)" /></li>
+    <li>Mascara de Subred: <select id="mask" onchange="action(this.id)"></select></li>
+    <li>Subredes: <select id="subnets" onchange="action(this.id)"></select></li>
+    <li>Hosts: <select id="hosts" onchange="action(this.id)"></select></li>
+    <li>Clase: <select id="class" onchange="action(this.id)">
+        <option id="classA">A</option>
+        <option id="classB">B</option>
+        <option id="classC">C</option>
+      </select></li>
+    <li><input type="submit" id="prevsubnet" value="Subred anterior" onclick="action(this.id);" /><input type="submit"
+        id="nextsubnet" value="Subred siguiente" onclick="action(this.id);" /></li>
+  </ul>
+  <table id="infotable">
+    <tr>
+      <th class="hidden"></th>
+      <th class="dec">Decimal</th>
+      <th class="hex">Hexadecimal</th>
+      <th class="bin">Binario</th>
+    </tr>
+    <tr class="even">
+      <th>ID Red</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>ID Subred</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="even">
+      <th>Primer Host</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Ultimo Host</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr class="even">
+      <th>Broadcast</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Mascara de Subred</th>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+  <script>action("load");</script>
+</body>
+
+</html>
